@@ -1,0 +1,25 @@
+import os
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+
+app = FastAPI()
+
+# Get the directory where this script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    # Construct the full path to index.html
+    index_path = os.path.join(BASE_DIR, "index.html")
+    try:
+        with open(index_path, "r") as f:
+            return f.read()
+    except FileNotFoundError:
+        return "<h1>Warranty Hub is Online</h1><p>Error: index.html not found in root.</p>"
+
+@app.post("/submit-claim")
+async def submit_claim(request: Request):
+    form_data = await request.form()
+    customer = form_data.get("customer_name")
+    return {"status": "success", "message": f"Claim received for {customer}"}
+    
