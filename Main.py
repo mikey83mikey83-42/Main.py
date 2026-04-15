@@ -1,5 +1,4 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from app import app
 import os
 import uvicorn
 from app import app
