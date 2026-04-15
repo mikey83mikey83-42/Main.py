@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import os
+import uvicorn
 
 app = FastAPI(title="Simple API", version="1.0.0")
 
@@ -16,6 +18,5 @@ async def read_root() -> Message:
 
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-  
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
