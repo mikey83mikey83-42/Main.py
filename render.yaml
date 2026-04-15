@@ -3,7 +3,7 @@ services:
     name: main-api
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn Main:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PORT
         value: 8000
