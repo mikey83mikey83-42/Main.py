@@ -1,2 +1,2 @@
-from fastapi import fastapi
-app=fastapi()
+from fastapi import FastAPI
+app=FastAPI()
