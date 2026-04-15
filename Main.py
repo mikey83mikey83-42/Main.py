@@ -10,5 +10,5 @@ def read_root():
 if __name__ == "__main__":
     # This allows you to run 'python Main.py' 
     # instead of using the uvicorn command line
-    uvicorn.run("Main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
      
