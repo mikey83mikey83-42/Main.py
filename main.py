@@ -7,8 +7,8 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World"}
 
-if __name__ == "__main__":
+if __name__ == "__main.py__":
     # This allows you to run 'python main.py' 
     # instead of using the uvicorn command line
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main.py:app", host="0.0.0.0", port=8000, reload=True)
      
