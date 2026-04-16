@@ -1,0 +1,16 @@
+# Exported from Render on 2026-04-16T06:29:57Z
+version: "1"
+projects:
+- name: East Coast e-bike warranty claims repair center LLC
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: claims.txt
+      runtime: python
+      repo: https://github.com/mikey83mikey83-42/requirements.txt
+      plan: free
+      region: oregon
+      buildCommand: pip install -r requirements.txt
+      startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+      autoDeployTrigger: commit

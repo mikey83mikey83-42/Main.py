@@ -1,1 +1,8 @@
+# FastAPI Web Framework
+fastapi==0.104.1
 
+# ASGI Server
+uvicorn==0.24.0
+
+# Data validation
+pydantic==2.5.0
