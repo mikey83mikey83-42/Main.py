@@ -1,7 +1,5 @@
-Fastapi
+fastapi
 uvicorn
-pydantic 
-stripe
-shippo
+pydantic
 python-multipart
 gunicorn
