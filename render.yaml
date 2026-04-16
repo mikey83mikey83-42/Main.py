@@ -1,14 +1,13 @@
-# Exported from Render on 2026-04-16T06:29:57Z
 version: "1"
 projects:
-- name: East Coast e-bike warranty claims repair center LLC
+- name: East Coast E-Bike Warranty Claims Repair Center LLC
   environments:
   - name: Production
     services:
     - type: web
-      name: claims.txt
+      name: warranty-hub
       runtime: python
-      repo: https://github.com/mikey83mikey83-42/requirements.txt
+      repo: https://github.com/mikey83mikey83-42/main.py
       plan: free
       region: oregon
       buildCommand: pip install -r requirements.txt
