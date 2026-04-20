@@ -1,1 +1,1 @@
-pip install httpx
+pip install uvicorn
