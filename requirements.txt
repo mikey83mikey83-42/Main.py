@@ -1,5 +1,8 @@
 fastapi
 uvicorn
 pydantic
+stripe
+shippo
 python-multipart
 gunicorn
+httpx
