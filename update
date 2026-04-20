@@ -1,1 +1,1 @@
-python -c "from main import app"
+pip install fastapi uvicorn httpx pydantic gunicorn
